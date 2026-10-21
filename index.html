@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1a5c">
+  <title>Vota Paolo e Federica 🗳️</title>
+  <meta name="description" content="Vota Paolo e Federica come rappresentanti di classe!">
+  <meta property="og:title" content="Vota Paolo e Federica 🗳️">
+  <meta property="og:description" content="Fai il quiz e scopri 100 motivi per votare noi!">
+  <meta property="og:image" content="manifesto.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <main class="poster">
+
+    <!-- IMMAGINE PRINCIPALE (originale, non modificata) -->
+    <section class="hero">
+      <img src="manifesto.png" width="1028" height="1529"
+           alt="Manifesto elettorale: Vote for us – Paolo e Federica vestiti da Zio Sam che indicano chi guarda">
+    </section>
+
+    <!-- QUIZ -->
+    <section class="quiz" id="quiz" aria-live="polite">
+      <div class="progress" id="progress" aria-hidden="true">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+
+      <h2 class="question" id="question"></h2>
+
+      <div class="answers" id="answers">
+        <button class="btn btn-yes" id="btnYes" type="button">1. NOI 👑</button>
+        <button class="btn btn-no" id="btnNo" type="button">2. LORO 🤢💩</button>
+      </div>
+
+      <div class="feedback" id="feedback" role="status"></div>
+    </section>
+
+    <!-- SCHERMATA FINALE -->
+    <section class="finale" id="finale" hidden>
+      <p class="finale-small">FINE</p>
+      <h2 class="finale-big">BELLA SCELTA <span class="thumb">👍</span></h2>
+      <div class="stars-line" aria-hidden="true"><span>★</span><span class="big">★</span><span>★</span></div>
+
+      <div class="accordion">
+        <button class="accordion-btn" id="accBtn" type="button"
+                aria-expanded="false" aria-controls="accPanel">
+          <span>100 motivi per votare noi e non loro</span>
+          <span class="chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="accPanel" role="region">
+          <div class="accordion-inner">
+            <h3>🗳️ 100 motivi per votare Paolo e Federica</h3>
+            <ol id="motiviList"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="motivi.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
